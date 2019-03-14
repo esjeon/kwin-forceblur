@@ -8,7 +8,7 @@ Item {
     id: root
 
     readonly property var patterns: (
-        KWin.readConfig("patterns", "")
+        KWin.readConfig("patterns", "yakuake\nurxvt\nkeepassxc")
             .split("\n")
             .map(function(rule) {
                 return rule.trim();
@@ -43,6 +43,7 @@ Item {
 
     Component.onCompleted: {
         console.log("FORCE-BLUR: starting the script");
+        console.log(JSON.stringify(root.patterns));
 
         var clients = workspace.clientList();
         for (var i = 0; i < clients.length; i++) {

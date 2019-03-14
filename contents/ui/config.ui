@@ -16,8 +16,11 @@
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
     <widget class="QLabel" name="label">
+     <property name="whatsThis">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;&amp;lt;&amp;lt;Example&amp;gt;&amp;gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;yakuake&lt;/p&gt;&lt;p&gt;keepassxc&lt;/p&gt;&lt;p&gt;urxvt&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
      <property name="text">
-      <string>Patterns</string>
+      <string notr="true">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enter window class names, &lt;span style=&quot; text-decoration: underline;&quot;&gt;one per line&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
     </widget>
    </item>
