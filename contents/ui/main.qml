@@ -7,6 +7,14 @@ import org.kde.kwin 2.0;
 Item {
     id: root
 
+    readonly property var patterns: (
+        KWin.readConfig("patterns", "")
+            .split("\n")
+            .map(function(rule) {
+                return rule.trim();
+            })
+    )
+
     PlasmaCore.DataSource {
         id: shell
         engine: 'executable'
@@ -26,7 +34,8 @@ Item {
     function onClientAdded(client) {
         if (!shell) return;
 
-        if (client.resourceClass.toString() === "st-256color") {
+        var cls = client.resourceClass.toString();
+        if (root.patterns.indexOf(cls) >= 0) {
             var wid = "0x" + client.windowId.toString(16);
             shell.run("xprop -f _KDE_NET_WM_BLUR_BEHIND_REGION 32c -set _KDE_NET_WM_BLUR_BEHIND_REGION 0 -id " + wid);
         }
@@ -41,7 +50,5 @@ Item {
         }
 
         workspace.onClientAdded.connect(root.onClientAdded);
-
-        console.log("patterns=" + KWin.readConfig("patterns", ""));
     }
 }
