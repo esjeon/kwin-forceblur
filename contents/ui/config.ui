@@ -22,7 +22,7 @@
     </widget>
    </item>
    <item>
-    <widget class="QLineEdit" name="kcfg_patterns"/>
+    <widget class="QPlainTextEdit" name="kcfg_patterns"/>
    </item>
   </layout>
  </widget>
