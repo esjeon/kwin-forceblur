@@ -1,4 +1,4 @@
 #!/bin/sh
-file=kwin-force-blur.kwinscript 
+file=forceblur.kwinscript 
 rm -rvf "$file" 
 exec zip -r9 "$file" *

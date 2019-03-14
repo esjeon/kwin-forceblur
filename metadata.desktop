@@ -7,7 +7,7 @@ X-Plasma-MainScript=ui/main.qml
 
 X-KDE-PluginInfo-Author=Eon S. Jeon
 X-KDE-PluginInfo-Email=esjeon@hyunmu.am
-X-KDE-PluginInfo-Name=force-blur
+X-KDE-PluginInfo-Name=forceblur
 X-KDE-PluginInfo-Version=0.1
 
 X-KDE-PluginInfo-Depends=
@@ -15,7 +15,7 @@ X-KDE-PluginInfo-License=MIT
 X-KDE-ServiceTypes=KWin/Script,KCModule
 
 X-KDE-Library=kwin/effects/configs/kcm_kwin4_genericscripted
-X-KDE-PluginKeyword=blur
-X-KDE-ParentComponents=force-blur
+X-KDE-PluginKeyword=forceblur
+X-KDE-ParentComponents=forceblur
 
 Type=Service
