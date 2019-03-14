@@ -1,0 +1,21 @@
+[Desktop Entry]
+Name=Force Blur
+Comment=Force-enable Blur effect for certain windows
+
+X-Plasma-API=declarativescript
+X-Plasma-MainScript=ui/main.qml
+
+X-KDE-PluginInfo-Author=Eon S. Jeon
+X-KDE-PluginInfo-Email=esjeon@hyunmu.am
+X-KDE-PluginInfo-Name=force-blur
+X-KDE-PluginInfo-Version=0.1
+
+X-KDE-PluginInfo-Depends=
+X-KDE-PluginInfo-License=MIT
+X-KDE-ServiceTypes=KWin/Script,KCModule
+
+X-KDE-Library=kwin/effects/configs/kcm_kwin4_genericscripted
+X-KDE-PluginKeyword=blur
+X-KDE-ParentComponents=force-blur
+
+Type=Service
