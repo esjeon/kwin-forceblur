@@ -18,8 +18,8 @@ How to Use
 
 2. Run the following in terminal, to enable script configuration:
 
-	mkdir -p ~/.local/share/kservices5/
-	cp ~/.local/share/kwin/scripts/forceblur/metadata.desktop ~/.local/share/kservices5/forceblur.desktop
+        mkdir -p ~/.local/share/kservices5/
+        cp ~/.local/share/kwin/scripts/forceblur/metadata.desktop ~/.local/share/kservices5/forceblur.desktop
 
 3. Open `Kwin Scripts` page in `System Settings`.
 
