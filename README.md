@@ -6,7 +6,7 @@ A KWin script to force-enable KWin Blur effect on user-specified windows.
 
 ![image](image.png)
 
-This is more useful than script-based hacks, because KWin script receives event
+This is more useful than shell script hacks, because KWin script receives event
 notification and window info from KWin. This can also fix tray-based apps,
 which loses blur hints when restored from system tray.
 
@@ -25,10 +25,10 @@ How to Use
 
 4. Enable `Force Blur` script by checking the checkbox next to it.
 
-5. Change script settings. Note that the script can only match window class.
+5. Change script settings. Note that the script can only match with window classes.
 
 6. Click `OK` to enable the script.
 
-7. Whenever the setting is changed, you must disable and re-enable the script.  
+7. Whenever settings are changed, you must disable and re-enable the script.  
    (Uncheck -> `Apply` -> Check -> `Apply`)
 
