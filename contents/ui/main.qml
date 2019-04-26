@@ -35,7 +35,8 @@ Item {
         if (!shell) return;
 
         var cls = client.resourceClass.toString().toLowerCase();
-        if (root.patterns.indexOf(cls) >= 0) {
+        var name = client.resourceName.toString().toLowerCase();
+        if (root.patterns.indexOf(cls) >= 0 || root.patterns.indexOf(name) >= 0) {
             var wid = "0x" + client.windowId.toString(16);
             shell.run("xprop -f _KDE_NET_WM_BLUR_BEHIND_REGION 32c -set _KDE_NET_WM_BLUR_BEHIND_REGION 0 -id " + wid);
         }
