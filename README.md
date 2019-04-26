@@ -11,6 +11,15 @@ notification and window info from KWin. This can also fix tray-based apps,
 which loses blur hints when restored from system tray.
 
 
+System Requirement
+------------------
+
+* Make sure you're using "Blur" desktop effect, which can be enabled through System Settings.
+
+* This script internally calls `xprop` command, which would be already installed
+  on your system.
+
+
 How to Use
 ----------
 
