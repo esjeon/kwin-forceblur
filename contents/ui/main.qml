@@ -11,7 +11,7 @@ Item {
         KWin.readConfig("patterns", "yakuake\nurxvt\nkeepassxc")
             .split("\n")
             .map(function(rule) {
-                return rule.trim();
+                return rule.trim().toLowerCase();
             })
     )
 
@@ -34,7 +34,7 @@ Item {
     function onClientAdded(client) {
         if (!shell) return;
 
-        var cls = client.resourceClass.toString();
+        var cls = client.resourceClass.toString().toLowerCase();
         if (root.patterns.indexOf(cls) >= 0) {
             var wid = "0x" + client.windowId.toString(16);
             shell.run("xprop -f _KDE_NET_WM_BLUR_BEHIND_REGION 32c -set _KDE_NET_WM_BLUR_BEHIND_REGION 0 -id " + wid);
