@@ -14,10 +14,17 @@ which loses blur hints when restored from system tray.
 System Requirement
 ------------------
 
+* Operating System:
+  - (K)Ubuntu 18.10 or newer
+  - Fedora 29 or newer
+  - Arch Linux - kwin 5.14 or newer
+
 * Make sure you're using "Blur" desktop effect, which can be enabled through System Settings.
 
 * This script internally calls `xprop` command, which would be already installed
   on your system.
+
+* X11 display server (the script does not support wayland applications)
 
 
 How to Use
