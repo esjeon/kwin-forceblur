@@ -1,5 +1,5 @@
 import QtQuick 2.0
-import QtQuick.Window 2.12
+import QtQuick.Window 2.2
 import org.kde.plasma.core 2.0 as PlasmaCore;
 import org.kde.plasma.components 2.0 as Plasma;
 import org.kde.kwin 2.0;
