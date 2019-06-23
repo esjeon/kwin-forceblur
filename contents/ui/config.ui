@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>400</width>
-    <height>400</height>
+    <height>451</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -27,8 +27,40 @@
    <item>
     <widget class="QPlainTextEdit" name="kcfg_patterns"/>
    </item>
+   <item>
+    <widget class="QSplitter" name="splitter">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <widget class="QRadioButton" name="kcfg_blurMatching">
+      <property name="text">
+       <string>Blur matching</string>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">matchTypeGroup</string>
+      </attribute>
+     </widget>
+     <widget class="QRadioButton" name="kcfg_blurExceptMatching">
+      <property name="text">
+       <string>Blur all except matching</string>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">matchTypeGroup</string>
+      </attribute>
+     </widget>
+    </widget>
+   </item>
   </layout>
  </widget>
  <resources/>
  <connections/>
+ <buttongroups>
+  <buttongroup name="matchTypeGroup"/>
+ </buttongroups>
 </ui>

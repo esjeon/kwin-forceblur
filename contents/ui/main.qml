@@ -14,6 +14,10 @@ Item {
             })
     )
 
+    readonly property var blurMatching: (
+        KWin.readConfig("blurMatching", true)
+    )
+
     PlasmaCore.DataSource {
         id: shell
         engine: 'executable'
@@ -35,7 +39,9 @@ Item {
 
         var cls = client.resourceClass.toString().toLowerCase();
         var name = client.resourceName.toString().toLowerCase();
-        if (root.patterns.indexOf(cls) >= 0 || root.patterns.indexOf(name) >= 0) {
+        var clsMatches = root.patterns.indexOf(cls) >= 0 || root.patterns.indexOf(name) >= 0;
+
+        if (clsMatches == root.blurMatching) {
             var wid = "0x" + client.windowId.toString(16);
             shell.run("xprop -f _KDE_NET_WM_BLUR_BEHIND_REGION 32c -set _KDE_NET_WM_BLUR_BEHIND_REGION 0 -id " + wid);
         }
