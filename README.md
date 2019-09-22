@@ -48,3 +48,10 @@ How to Use
 7. Whenever settings are changed, you must disable and re-enable the script.  
    (Uncheck -> `Apply` -> Check -> `Apply`)
 
+
+Authors
+-------
+
+Eon S. Jeon <esjeon@hyunmu.am> - main author
+Aaron Miller (https://github.com/aaronm-cloudtek) - blacklist mode
+
