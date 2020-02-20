@@ -1,6 +1,7 @@
 [Desktop Entry]
 Name=Force Blur
 Comment=Force-enable Blur effect for certain windows
+Icon=preferences-system-windows-script-test
 
 X-Plasma-API=declarativescript
 X-Plasma-MainScript=ui/main.qml
