@@ -70,7 +70,6 @@ Item {
         var wid = "0x" + client.windowId.toString(16);
         var region = "0,0," + client.geometry.width + "," + client.geometry.height;
         var cmd = "xprop -id " + wid + " -f _KDE_NET_WM_BLUR_BEHIND_REGION 32c -set _KDE_NET_WM_BLUR_BEHIND_REGION " + region
-        console.log(cmd);
         shell.run(cmd);
     }
 
