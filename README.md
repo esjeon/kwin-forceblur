@@ -52,6 +52,6 @@ How to Use
 Authors
 -------
 
-Eon S. Jeon <esjeon@hyunmu.am> - main author
-Aaron Miller (https://github.com/aaronm-cloudtek) - blacklist mode
+* Eon S. Jeon <esjeon@hyunmu.am> - main author
+* Aaron Miller (https://github.com/aaronm-cloudtek) - blacklist mode
 
