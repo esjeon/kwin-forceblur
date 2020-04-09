@@ -4,7 +4,7 @@ Force Blur
 
 A KWin script to force-enable KWin Blur effect on user-specified windows.
 
-![image](image.png)
+![](image.png)
 
 This is more useful than shell script hacks, because KWin script receives event
 notification and window info from KWin. This can also fix tray-based apps,
