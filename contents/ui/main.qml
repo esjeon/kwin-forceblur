@@ -25,12 +25,11 @@ Item {
         connectedSources: []
 
         function run(cmd) {
-            shell.connectedSources.push(cmd);
+            shell.connectSource(cmd);
         }
 
         onNewData: {
-            var arr = shell.connectedSources;
-            arr.splice(arr.indexOf(sourceName));
+            shell.disconnectSource(sourceName);
         }
     }
 
