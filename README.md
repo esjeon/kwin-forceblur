@@ -49,6 +49,16 @@ How to Use
    (Uncheck -> `Apply` -> Check -> `Apply`)
 
 
+GTK CSD Shadow
+--------------
+
+Some GTK applications render client-side shadows, which look ugly if blurred. To
+prevent this, you can enable "**Blur only the content of window**" option.
+
+This works by updating the blur region info whenever a window is resized, so
+might have some performance impacts. Use with caution.
+
+
 Authors
 -------
 
