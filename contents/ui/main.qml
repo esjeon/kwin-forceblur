@@ -18,6 +18,10 @@ Item {
         KWin.readConfig("blurMatching", true)
     )
 
+    readonly property var blurContent: (
+        KWin.readConfig("blurContent", false)
+    )
+
     PlasmaCore.DataSource {
         id: shell
         engine: 'executable'
@@ -41,23 +45,32 @@ Item {
         var clsMatches = root.patterns.indexOf(cls) >= 0 || root.patterns.indexOf(name) >= 0;
 
         if (clsMatches == root.blurMatching) {
-            var prevWidth  = client.geometry.width;
-            var prevHeight = client.geometry.height;
-            var handler = function() {
-                try { if (!root) return; } catch(e) {
-                    client.geometryChanged.disconnect(handler);
-                    throw e;
-                }
+            if (root.blurContent) {
+                registerHintUpdater(client);
+            } else {
+                var wid = "0x" + client.windowId.toString(16);
+                shell.run("xprop -f _KDE_NET_WM_BLUR_BEHIND_REGION 32c -set _KDE_NET_WM_BLUR_BEHIND_REGION 0 -id " + wid);
+            }
+        }
+    }
 
-                root.onClientGeometryChanged(client, prevWidth, prevHeight);
-
-                prevWidth  = client.geometry.width;
-                prevHeight = client.geometry.height;
+    function registerHintUpdater(client) {
+        var prevWidth  = client.geometry.width;
+        var prevHeight = client.geometry.height;
+        var handler = function() {
+            try { if (!root) return; } catch(e) {
+                client.geometryChanged.disconnect(handler);
+                throw e;
             }
 
-            client.geometryChanged.connect(handler);
-            root.onClientGeometryChanged(client, 0, 0);
+            root.onClientGeometryChanged(client, prevWidth, prevHeight);
+
+            prevWidth  = client.geometry.width;
+            prevHeight = client.geometry.height;
         }
+
+        client.geometryChanged.connect(handler);
+        root.onClientGeometryChanged(client, 0, 0);
     }
 
     function onClientGeometryChanged(client, prevWidth, prevHeight) {

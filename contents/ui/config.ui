@@ -56,6 +56,16 @@
      </widget>
     </widget>
    </item>
+   <item>
+    <widget class="QCheckBox" name="kcfg_blurContent">
+     <property name="toolTip">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enabling this option prevents blurring behind the non-content regions of window, like &lt;span style=&quot; font-weight:600;&quot;&gt;CSD shadows in GTK&lt;/span&gt;.&lt;/p&gt;&lt;p&gt;This &lt;span style=&quot; text-decoration: underline;&quot;&gt;might&lt;/span&gt; cause performance issues and flickers, thus users should be careful about turning this on.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="text">
+      <string>Blur only the content of window</string>
+     </property>
+    </widget>
+   </item>
   </layout>
  </widget>
  <resources/>
