@@ -14,6 +14,5 @@ X-KDE-PluginInfo-License=MIT
 
 Type=Service
 X-KDE-ServiceTypes=KWin/Script
-X-Plasma-API=javascript
 
 X-KDE-ConfigModule=kwin/effects/configs/kcm_kwin4_genericscripted
