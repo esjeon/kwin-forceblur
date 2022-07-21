@@ -50,6 +50,9 @@ Item {
             } else {
                 var wid = "0x" + client.windowId.toString(16);
                 shell.run("xprop -f _KDE_NET_WM_BLUR_BEHIND_REGION 32c -set _KDE_NET_WM_BLUR_BEHIND_REGION 0 -id " + wid);
+            } else if (name.length == 0 && !root.blurMatching) {
+                var wid = "0x" + client.windowId.toString(16);
+                shell.run("xprop -f _KDE_NET_WM_BLUR_BEHIND_REGION 32c -set _KDE_NET_WM_BLUR_BEHIND_REGION 0 -id " + wid);
             }
         }
     }
