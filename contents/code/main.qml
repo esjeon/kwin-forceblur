@@ -38,7 +38,6 @@ Item {
     }
 
     function onClientAdded(client) {
-        console.log("FORCE-BLUR: onClientAdded called");
         if (!shell) return;
 
         var cls = client.resourceClass.toString().toLowerCase();
