@@ -1,11 +1,11 @@
  {
     "KPlugin": {
 
-        "Name": "Force Blur T",
+        "Name": "Force Blur",
         "Description": "Force-enable Blur effect for certain windows",
         "Icon": "preferences-system-windows-script-test",
 
-        "Id": "forceblurt",
+        "Id": "forceblur",
         "License": "MIT",
         "Version": "0.7",
 
