@@ -38,6 +38,7 @@ Item {
     }
 
     function onClientAdded(client) {
+        console.log("FORCE-BLUR: onClientAdded called");
         if (!shell) return;
 
         var cls = client.resourceClass.toString().toLowerCase();
@@ -91,6 +92,7 @@ Item {
         console.log(JSON.stringify(root.patterns));
 
         var clients = workspace.clientList();
+
         for (var i = 0; i < clients.length; i++) {
             root.onClientAdded(clients[i]);
         }

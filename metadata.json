@@ -1,0 +1,29 @@
+ {
+    "KPlugin": {
+
+        "Name": "Force Blur T",
+        "Description": "Force-enable Blur effect for certain windows",
+        "Icon": "preferences-system-windows-script-test",
+
+        "Id": "forceblurt",
+        "License": "MIT",
+        "Version": "0.7",
+
+        "Authors": [
+            {
+                "Email": "esjeon@hyunmu.am",
+                "Name": "Eon S. Jeon"
+            }
+        ],
+
+        "ServiceTypes": [
+            "KWin/Script"
+        ]
+    },
+    "Keywords": "blur",
+
+    "X-KDE-ConfigModule": "kwin/effects/configs/kcm_kwin4_genericscripted",
+    "X-Plasma-API": "declarativescript",
+    "X-Plasma-MainScript": "code/main.qml",
+    "KPackageStructure": "KWin/Script"
+}
